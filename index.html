@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-lang="ar" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>الشريحي — معرض أعمال | ALSHURAIHI</title>
+<meta name="description" content="معرض الشريحي: تسعة مشاريع رقمية في السرد والذاكرة والتوعية والتصميم. من وحي الفكرة إلى روعة التنفيذ.">
+<meta name="author" content="الشريحي">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#f2ede3">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALSHURAIHI">
+<meta property="og:title" content="الشريحي — معرض أعمال رقمية | ALSHURAIHI">
+<meta property="og:description" content="تسعة مشاريع رقمية في السرد والذاكرة والتوعية والتصميم. من وحي الفكرة إلى روعة التنفيذ.">
+<meta property="og:locale" content="ar_AR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:image" content="assets/img/og-cover.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="الشريحي — معرض أعمال رقمية">
+<meta name="twitter:description" content="تسعة مشاريع رقمية في السرد والذاكرة والتوعية والتصميم.">
+<meta name="twitter:image" content="assets/img/og-cover.webp">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preload" href="assets/fonts/reem-arabic-400700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plex-ar-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/projects/palestine-01.webp" as="image" type="image/webp" fetchpriority="high">
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+(function () {
+  var d = document.documentElement;
+  d.classList.add('js');
+  var theme, lang;
+  try { theme = localStorage.getItem('alshuraihi.theme'); } catch (e) {}
+  if (theme !== 'light' && theme !== 'dark') {
+    theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  d.setAttribute('data-theme', theme);
+  try { lang = localStorage.getItem('alshuraihi.lang'); } catch (e) {}
+  if (lang !== 'en') lang = 'ar';
+  d.setAttribute('data-lang', lang);
+  d.lang = lang;
+  d.dir = lang === 'en' ? 'ltr' : 'rtl';
+  var m = document.querySelector('meta[name="theme-color"]');
+  if (m) m.setAttribute('content', theme === 'dark' ? '#0b0c0a' : '#f2ede3');
+})();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main" data-i18n="ui.skip">انتقل إلى المحتوى</a>
+<div class="grain" aria-hidden="true"></div>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+<div class="cursor" aria-hidden="true">
+  <div class="cursor__dot"></div>
+  <div class="cursor__ring"><span class="cursor__label" data-i18n="ui.view">عرض</span></div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="brand" href="#top" aria-label="الشريحي — الرئيسية" data-i18n-aria-label="ui.home">
+      <svg class="seal" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+        <circle cx="24" cy="24" r="22.25" stroke="currentColor" stroke-width="1"/>
+        <rect x="13.5" y="13.5" width="21" height="21" stroke="currentColor" stroke-width="1"/>
+        <rect x="13.5" y="13.5" width="21" height="21" stroke="currentColor" stroke-width="1" transform="rotate(45 24 24)"/>
+        <circle cx="24" cy="24" r="8.5" stroke="currentColor" stroke-width=".6" opacity=".55"/>
+        <circle cx="24" cy="24" r="3.8" fill="currentColor"/>
+      </svg>
+      <span class="brand__text">
+        <span class="brand__ar" lang="ar">الشريحي</span>
+        <span class="brand__lat" lang="en">ALSHURAIHI</span>
+      </span>
+    </a>
+
+    <nav class="site-nav" aria-label="التنقل الرئيسي" data-i18n-aria-label="ui.mainNav">
+      <a href="#works" data-nav="works"><span data-i18n="nav.work">الأعمال</span><sup>09</sup></a>
+      <a href="#index" data-nav="index"><span data-i18n="nav.index">الفهرس</span></a>
+      <a href="#about" data-nav="about"><span data-i18n="nav.about">عن المعرض</span></a>
+      <a href="#contact" data-nav="contact"><span data-i18n="nav.contact">التواصل</span></a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="التبديل إلى الوضع الليلي" data-i18n-aria-label="ui.themeToDark">
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M12 2.2v2.4M12 19.4v2.4M2.2 12h2.4M19.4 12h2.4M5.1 5.1l1.7 1.7M17.2 17.2l1.7 1.7M18.9 5.1l-1.7 1.7M6.8 17.2l-1.7 1.7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20.1 14.2A8.4 8.4 0 0 1 9.8 3.9 8.4 8.4 0 1 0 20.1 14.2Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Switch to English" data-i18n-aria-label="ui.toEnglish">
+        <span class="lang-target" data-lang-target>EN</span>
+      </button>
+      <button class="menu-toggle" type="button" data-menu-open aria-label="فتح القائمة" data-i18n-aria-label="ui.openMenu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-labelledby="menuTitle" hidden>
+  <div class="menu__bg" aria-hidden="true"></div>
+  <div class="menu__inner">
+    <div class="menu__top">
+      <a class="brand brand--menu" href="#top" aria-label="الشريحي — الرئيسية" data-i18n-aria-label="ui.home">
+        <svg class="seal" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <circle cx="24" cy="24" r="22.25" stroke="currentColor" stroke-width="1"/>
+          <rect x="13.5" y="13.5" width="21" height="21" stroke="currentColor" stroke-width="1"/>
+          <rect x="13.5" y="13.5" width="21" height="21" stroke="currentColor" stroke-width="1" transform="rotate(45 24 24)"/>
+          <circle cx="24" cy="24" r="8.5" stroke="currentColor" stroke-width=".6" opacity=".55"/>
+          <circle cx="24" cy="24" r="3.8" fill="currentColor"/>
+        </svg>
+        <span class="brand__text"><span class="brand__ar" lang="ar">الشريحي</span><span class="brand__lat" lang="en">ALSHURAIHI</span></span>
+      </a>
+      <button class="menu-close" type="button" data-menu-close aria-label="إغلاق القائمة" data-i18n-aria-label="ui.closeMenu">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 5 14 14M19 5 5 19" stroke="currentColor" stroke-width="1.1"/></svg>
+      </button>
+    </div>
+    <div class="menu__body">
+      <p class="menu__label" id="menuTitle" data-i18n="menu.label">أين تحب أن تبدأ؟</p>
+      <nav class="menu__nav" aria-label="قائمة التنقل" data-i18n-aria-label="ui.menuNav">
+        <a href="#works"><span class="menu__num">01</span><span data-i18n="nav.work">الأعمال</span></a>
+        <a href="#index"><span class="menu__num">02</span><span data-i18n="nav.index">الفهرس</span></a>
+        <a href="#about"><span class="menu__num">03</span><span data-i18n="nav.about">عن المعرض</span></a>
+        <a href="#contact"><span class="menu__num">04</span><span data-i18n="nav.contact">التواصل</span></a>
+      </nav>
+      <div class="menu__aside">
+        <p class="menu__tagline" data-i18n="brand.tagline">من وحي الفكرة إلى روعة التنفيذ</p>
+        <a class="menu__tg" href="https://t.me/MKH_ksa" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.6 18.7 19c-.2 1-.9 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.9 13.1 2.3 11.7c-1-.3-1-1 .2-1.5l18.9-7.3c.8-.3 1.6.2 1.3 1.7Z"/></svg>
+          <span dir="ltr">@MKH_ksa</span>
+          <span class="menu__tg-arrow" aria-hidden="true">↗</span>
+        </a>
+        <div class="menu__actions">
+          <button class="menu__action" type="button" data-theme-toggle aria-label="التبديل إلى الوضع الليلي" data-i18n-aria-label="ui.themeToDark">
+            <span data-menu-theme-label data-i18n="ui.darkMode">الوضع الليلي</span>
+          </button>
+          <button class="menu__action" type="button" data-lang-toggle aria-label="Switch to English" data-i18n-aria-label="ui.toEnglish">
+            <span data-lang-label data-i18n="ui.english">English</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="menu__foot">
+      <span data-i18n="menu.foot">معرض أعمال رقمي — ٢٠٢٦</span>
+      <span lang="en">ALSHURAIHI</span>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="heroTitle">
+    <div class="hero__inner">
+      <div class="hero__copy">
+        <p class="eyebrow hero__eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="hero.eyebrow">معرض أعمال رقمي · ٢٠٢٦</span></p>
+        <div class="hero__lockup">
+          <h1 class="hero__title" id="heroTitle"><span lang="ar">الشريحي</span></h1>
+          <span class="hero__latin" lang="en">ALSHURAIHI</span>
+        </div>
+        <p class="hero__tagline" data-i18n-html="hero.tagline">من وحي الفكرة<span class="hero__star" aria-hidden="true">✦</span>إلى روعة التنفيذ.</p>
+        <p class="hero__desc" data-i18n="hero.desc">تسعة مشاريع تُترجم الأفكار إلى تجارب رقمية: سردٌ للتاريخ والذاكرة، توعيةٌ تحمي التفاصيل، وتصميمٌ يُروى بالحركة والصورة والكلمة.</p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#works" data-magnetic>
+            <span data-i18n="hero.cta1">استكشف الأعمال</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a class="link-quiet" href="#about"><span data-i18n="hero.cta2">تعرّف على المعرض</span><span class="link-quiet__line" aria-hidden="true"></span></a>
+        </div>
+      </div>
+
+      <div class="hero__stage" id="heroStage">
+        <div class="stage__outline" aria-hidden="true"></div>
+        <div class="arch">
+          <div class="arch__media">
+            <img id="heroImgA" class="arch__img is-active" src="assets/img/projects/palestine-01.webp" width="1440" height="900" alt="لقطة شاشة من موقع فلسطين: القدس وقبة الصخرة مع عنوان «فلسطين حكاية وطن»" data-i18n-alt="ch.1.altA" fetchpriority="high" decoding="async">
+            <img id="heroImgB" class="arch__img" src="assets/img/projects/fajr-01.webp" width="1440" height="900" alt="" aria-hidden="true" decoding="async">
+          </div>
+          <div class="arch__shade" aria-hidden="true"></div>
+          <div class="arch__top">
+            <span class="arch__count" id="heroCount" aria-hidden="true">01 / 09</span>
+            <a class="arch__open" id="heroOpen" href="https://palestine-interactiv-nv9w.bolt.host/" target="_blank" rel="noopener noreferrer">
+              <span data-i18n="hero.open">افتح المشروع</span>
+              <span aria-hidden="true">↗</span>
+              <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+            </a>
+          </div>
+          <div class="arch__caption">
+            <span class="arch__index" id="heroIndex">01</span>
+            <div class="arch__meta">
+              <span class="arch__kicker" data-i18n="hero.featured">مشروع مختار</span>
+              <a class="arch__title" id="heroProject" href="#ch-palestine" data-i18n="ch.1.titleFull">فلسطين | حكاية وطن</a>
+            </div>
+          </div>
+        </div>
+        <div class="hero__controls">
+          <div class="hero__dots" id="heroDots" aria-label="اختيار مشروع مميز" data-i18n-aria-label="hero.dotsLabel"></div>
+          <div class="hero__arrows">
+            <button class="round-btn" type="button" id="heroPrev" aria-label="المشروع السابق" data-i18n-aria-label="hero.prev">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="round-btn" type="button" id="heroNext" aria-label="المشروع التالي" data-i18n-aria-label="hero.next">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="orbit-seal" aria-hidden="true">
+          <svg viewBox="0 0 180 180" fill="none">
+            <defs><path id="sealArc" d="M90 90m-64 0a64 64 0 1 1 128 0a64 64 0 1 1-128 0"/></defs>
+            <circle cx="90" cy="90" r="86" stroke="currentColor" stroke-width=".7" opacity=".45"/>
+            <circle cx="90" cy="90" r="48" stroke="currentColor" stroke-width=".7" opacity=".28"/>
+            <text class="orbit-seal__text"><textPath href="#sealArc" startOffset="0" data-i18n="seal.text">من وحي الفكرة · إلى روعة التنفيذ ·</textPath></text>
+            <g class="orbit-seal__star" stroke="currentColor" stroke-width=".9">
+              <rect x="72" y="72" width="36" height="36"/>
+              <rect x="72" y="72" width="36" height="36" transform="rotate(45 90 90)"/>
+              <circle cx="90" cy="90" r="4.2" fill="currentColor" stroke="none"/>
+            </g>
+          </svg>
+        </div>
+        <span class="vertical-label" aria-hidden="true">SELECTED WORK — 2026</span>
+      </div>
+    </div>
+
+    <div class="hero__foot">
+      <div class="hero__facts">
+        <div class="fact"><span class="fact__value">09</span><span class="fact__label" data-i18n="hero.fact1">مشاريع مختارة</span></div>
+        <span class="fact__sep" aria-hidden="true"></span>
+        <div class="fact"><span class="fact__value" lang="en">AR / EN</span><span class="fact__label" data-i18n="hero.fact2">نسختان كاملتان</span></div>
+        <span class="fact__sep" aria-hidden="true"></span>
+        <div class="fact"><span class="fact__value">◐</span><span class="fact__label" data-i18n="hero.fact3">وضعان للعرض</span></div>
+      </div>
+      <a class="scroll-cue" href="#statement">
+        <span class="scroll-cue__line" aria-hidden="true"></span>
+        <span data-i18n="hero.scroll">مرّر للاستكشاف</span>
+      </a>
+      <p class="hero__edition" data-i18n="hero.edition">الإصدار ٠١ — ٢٠٢٦</p>
+    </div>
+    <div class="hero__ghost" aria-hidden="true" lang="en">ALSHURAIHI</div>
+  </section>
+  <section class="statement" id="statement" aria-labelledby="statementTitle">
+    <div class="statement__inner">
+      <div class="statement__top">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="statement.eyebrow">الهوية</span></p>
+        <span class="statement__latin" lang="en">THE ETHOS — 001</span>
+      </div>
+      <div class="statement__grid">
+        <h2 class="statement__title" id="statementTitle" data-i18n-html="statement.title">من وحي الفكرة<br><em>إلى روعة التنفيذ.</em></h2>
+        <div class="statement__aside">
+          <p class="statement__desc" data-i18n="statement.desc">لا شيء يبدأ جاهزاً. كل مشروع هنا بدأ سؤالاً، ثم صار حكاية، ثم واجهة تُقرأ وتُعاش. بين الفكرة والتنفيذ، تعيش التفاصيل التي تصنع الفرق.</p>
+          <ul class="statement__chips">
+            <li data-i18n="statement.chip1">سرد وتاريخ</li>
+            <li data-i18n="statement.chip2">توعية وتجربة</li>
+            <li data-i18n="statement.chip3">هوية وتفاصيل</li>
+          </ul>
+          <p class="statement__mark" aria-hidden="true">✦</p>
+        </div>
+      </div>
+    </div>
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span data-i18n="marquee.1">سرد تفاعلي</span><i>✦</i>
+          <span data-i18n="marquee.2">هوية رقمية</span><i>✦</i>
+          <span data-i18n="marquee.3">توعية واعية</span><i>✦</i>
+          <span data-i18n="marquee.4">تجارب ويب</span><i>✦</i>
+          <span data-i18n="marquee.5">تفاصيل تُروى</span><i>✦</i>
+        </div>
+        <div class="marquee__group">
+          <span data-i18n="marquee.1">سرد تفاعلي</span><i>✦</i>
+          <span data-i18n="marquee.2">هوية رقمية</span><i>✦</i>
+          <span data-i18n="marquee.3">توعية واعية</span><i>✦</i>
+          <span data-i18n="marquee.4">تجارب ويب</span><i>✦</i>
+          <span data-i18n="marquee.5">تفاصيل تُروى</span><i>✦</i>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="index" id="index" aria-labelledby="indexTitle">
+    <div class="index__head">
+      <div class="index__heading">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="index.eyebrow">الفهرس</span></p>
+        <h2 class="index__title" id="indexTitle" data-i18n-html="index.title">تسعة مشاريع،<br><em>وبابٌ لكل حكاية.</em></h2>
+      </div>
+      <div class="index__meta">
+        <span class="index__count" aria-hidden="true">09</span>
+        <p data-i18n="index.note">من الخريطة التي تحكي وطناً، إلى المحاكاة التي تعلّمك قبل أن تنقر. اختر مشروعاً لتنتقل إلى فصله.</p>
+      </div>
+    </div>
+    <div class="index__list" id="indexList" aria-label="فهرس المشاريع" data-i18n-aria-label="index.listLabel">
+      <a class="index__row" href="#ch-palestine" data-project="palestine" data-preview="assets/img/projects/palestine-02.webp" style="--accent:#6f7d4d">
+        <span class="index__num">01</span>
+        <span class="index__rowtitle">فلسطين <span>| حكاية وطن</span></span>
+        <span class="index__tags">سرد تفاعلي · خريطة وذاكرة · تراث</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-fajr" data-project="fajr" data-preview="assets/img/projects/fajr-02.webp" style="--accent:#c01f3c">
+        <span class="index__num">02</span>
+        <span class="index__rowtitle">فجر اليمن</span>
+        <span class="index__tags">منصة إخبارية · بيانات · تحقق</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-syria" data-project="syria" data-preview="assets/img/projects/syria-02.webp" style="--accent:#315d47">
+        <span class="index__num">03</span>
+        <span class="index__rowtitle">سوريا <span>| ذاكرة وطن</span></span>
+        <span class="index__tags">أرشيف بصري · خط زمني · ذاكرة</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-cv" data-project="cv" data-preview="assets/img/projects/cv-02.webp" style="--accent:#2d5d7d">
+        <span class="index__num">04</span>
+        <span class="index__rowtitle">السيرة الذاتية الرقمية</span>
+        <span class="index__tags">سيرة رقمية · واجهة · طباعة</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-store" data-project="store" data-preview="assets/img/projects/store-02.webp" style="--accent:#d99a1e">
+        <span class="index__num">05</span>
+        <span class="index__rowtitle">متجر MKH</span>
+        <span class="index__tags">خدمات تصميم · حاسبة طلب · تيليجرام</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-gallery" data-project="gallery" data-preview="assets/img/projects/gallery-02.webp" style="--accent:#b1833f">
+        <span class="index__num">06</span>
+        <span class="index__rowtitle">معرض أعمال MKH</span>
+        <span class="index__tags">معرض أعمال · هوية · أدوات</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-beyond" data-project="beyond" data-preview="assets/img/projects/beyond-02.webp" style="--accent:#e43a5b">
+        <span class="index__num">07</span>
+        <span class="index__rowtitle">ما وراء الصورة</span>
+        <span class="index__tags">تحقيق بصري · تزييف عميق · وعي</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-warning" data-project="warning" data-preview="assets/img/projects/warning-02.webp" style="--accent:#2fd8bd">
+        <span class="index__num">08</span>
+        <span class="index__rowtitle">قبل أن تنقر <span>| التوعية بالروابط الخطرة</span></span>
+        <span class="index__tags">محاكاة · أمن رقمي · توعية</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+      <a class="index__row" href="#ch-journey" data-project="journey" data-preview="assets/img/projects/journey-02.webp" style="--accent:#b98a3e">
+        <span class="index__num">09</span>
+        <span class="index__rowtitle">رحلتي في عالم الويب</span>
+        <span class="index__tags">عرض تفاعلي · رحلة · دروس</span>
+        <span class="index__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      </a>
+    </div>
+    <div class="index__bottom">
+      <p class="index__hint"><span class="index__hintmark" aria-hidden="true">↳</span><span data-i18n="index.hint">مرّر على الأسماء لمعاينة سريعة، واضغط لتفتح الفصل.</span></p>
+      <span class="index__foot" aria-hidden="true" lang="en">INDEX / 09</span>
+    </div>
+    <div class="index__preview" id="indexPreview" aria-hidden="true">
+      <div class="index__previewframe"><img id="indexPreviewImg" alt="" width="1440" height="900" loading="lazy" decoding="async"></div>
+      <span class="index__previewlabel" id="indexPreviewLabel"></span>
+    </div>
+  </section>
+  <section class="works" id="works" aria-labelledby="worksTitle">
+    <div class="works__head">
+      <div>
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="works.eyebrow">الأعمال المختارة</span></p>
+        <h2 class="works__title" id="worksTitle" data-i18n-html="works.title">تسعة أعمال،<br><em>ولكلٍّ منها عالم.</em></h2>
+      </div>
+      <div class="works__aside">
+        <p data-i18n="works.desc">من الخريطة التي تحكي وطناً، إلى المحاكاة التي تعلّمك قبل أن تنقر؛ كل فصل هنا مشروع حقيقي كما يعيشه الزائر.</p>
+        <span class="works__range" lang="en" aria-hidden="true">01 — 09</span>
+      </div>
+    </div>
+
+    <div class="works__list">
+      <article class="chapter ch--wide reveal" id="ch-palestine" data-project="palestine" style="--accent:#6f7d4d;--accent-2:#b8ad79">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">01</span><span class="chapter__type" data-i18n="ch.1.type">تجربة سردية</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.1.titleMain">فلسطين</span><span class="chapter__sep" aria-hidden="true">|</span><span class="chapter__sub" data-i18n="ch.1.titleSub">حكاية وطن</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.1.desc">رحلة تفاعلية في جغرافيا فلسطين وتاريخها وتراثها؛ من خريطة المدن والمقدسات إلى خط زمني يمتد من فجر الحضارات إلى الحاضر، ومعرض بصري يروي حكاية وطن.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.1.tag1">سرد تفاعلي</li><li data-i18n="ch.1.tag2">خريطة وذاكرة</li><li data-i18n="ch.1.tag3">تراث</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.1.metaType">تجربة سردية</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.1.metaFocus">خريطة المدن · خط زمني · معرض بصري</dd></div>
+              </dl>
+              <a class="project-link" href="https://palestine-interactiv-nv9w.bolt.host/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/palestine-01.webp" width="1440" height="900" alt="لقطة شاشة من موقع فلسطين: القدس وقبة الصخرة مع عنوان «فلسطين حكاية وطن»" data-i18n-alt="ch.1.altA" loading="lazy" decoding="async"></div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.1.capA">الواجهة الرئيسية لتجربة «فلسطين | حكاية وطن»</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/palestine-02.webp" width="1440" height="900" alt="قسم خريطة المدن داخل موقع فلسطين" data-i18n-alt="ch.1.altB" loading="lazy" decoding="async" style="object-position:50% 38%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.1.capB">خريطة المدن داخل التجربة</span></figcaption>
+            </figure>
+            <span class="chapter__bignum" aria-hidden="true">01</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--split ch--flip reveal" id="ch-fajr" data-project="fajr" style="--accent:#b81d38;--accent-2:#d7a24a">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">02</span><span class="chapter__type" data-i18n="ch.2.type">منصة تعريفية</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.2.titleMain">فجر اليمن</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.2.desc">منصة تعريفية مستقلة تغطي عملية «فجر اليمن» وتطوراتها، مع أقسام للأخبار والبيانات والمحافظات، ومحور خاص بتعز، ومساحة للمصادر والتحقق قبل التصديق.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.2.tag1">منصة إخبارية</li><li data-i18n="ch.2.tag2">بيانات</li><li data-i18n="ch.2.tag3">تحقق</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.2.metaType">منصة تعريفية</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.2.metaFocus">أخبار · بيانات · مصادر</dd></div>
+              </dl>
+              <a class="project-link" href="https://fajr-al-yemen.bolt.host/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame media__frame--ticker">
+                <span class="ticker" aria-hidden="true"><i></i><span data-i18n="ch.2.ticker">سياق · أخبار · تحقق</span></span>
+                <img class="media__img" src="assets/img/projects/fajr-01.webp" width="1440" height="900" alt="لقطة شاشة من منصة فجر اليمن: واجهة رئيسية لمدينة تاريخية وعنوان الحرب اليمنية" data-i18n-alt="ch.2.altA" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.2.capA">الواجهة الرئيسية لمنصة «فجر اليمن»</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/fajr-02.webp" width="1440" height="900" alt="قسم الأخبار والتقارير في منصة فجر اليمن" data-i18n-alt="ch.2.altB" loading="lazy" decoding="async" style="object-position:72% 45%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.2.capB">أحدث الأخبار والتقارير</span></figcaption>
+            </figure>
+            <span class="chapter__bignum" aria-hidden="true">02</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--diptych reveal" id="ch-syria" data-project="syria" style="--accent:#315d47;--accent-2:#c39155">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">03</span><span class="chapter__type" data-i18n="ch.3.type">أرشيف تفاعلي</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.3.titleMain">سوريا</span><span class="chapter__sep" aria-hidden="true">|</span><span class="chapter__sub" data-i18n="ch.3.titleSub">ذاكرة وطن</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.3.desc">أرشيف رقمي لسوريا: خط زمني للحضارات، ومدنٌ تحكي التاريخ، وتراثٌ ومطبخ وأزياء، ومحطات الألم والتحرير، وحكايات أمل تنتهي بسؤال المستقبل.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.3.tag1">أرشيف بصري</li><li data-i18n="ch.3.tag2">خط زمني</li><li data-i18n="ch.3.tag3">ذاكرة</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.3.metaType">أرشيف تفاعلي</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.3.metaFocus">مدن · تراث · تحرير</dd></div>
+              </dl>
+              <a class="project-link" href="https://interactive-syria-he-5ofy.bolt.host/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/syria-01.webp" width="1440" height="900" alt="غلاف موقع سوريا: حارة دمشقية قديمة وعنوان «سوريا حكاية أرض وذاكرة شعب وأمل لا ينطفئ»" data-i18n-alt="ch.3.altA" loading="lazy" decoding="async"></div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.3.capA">غلاف «سوريا | حكاية وطن لا ينكسر»</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/syria-02.webp" width="1440" height="900" alt="قسم مدن تحكي التاريخ داخل موقع سوريا" data-i18n-alt="ch.3.altB" loading="lazy" decoding="async" style="object-position:50% 30%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.3.capB">مدن تحكي التاريخ</span></figcaption>
+            </figure>
+            <span class="chapter__bignum" aria-hidden="true">03</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--paper reveal" id="ch-cv" data-project="cv" style="--accent:#2d5d7d;--accent-2:#9ab0c0">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">04</span><span class="chapter__type" data-i18n="ch.4.type">سيرة رقمية</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.4.titleMain">السيرة الذاتية الرقمية</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.4.desc">سيرة ذاتية رقمية تحوّل البيانات الشخصية والتعليم والخبرات والمهارات إلى صفحة منظمة قابلة للطباعة، مع وضع ليلي وتجربة قراءة مريحة على الشاشات الصغيرة.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.4.tag1">سيرة رقمية</li><li data-i18n="ch.4.tag2">واجهة</li><li data-i18n="ch.4.tag3">طباعة</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.4.metaType">سيرة ذاتية رقمية</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.4.metaFocus">تعليم · خبرات · مهارات</dd></div>
+              </dl>
+              <a class="project-link" href="https://marwa-al-shuraihi-ye.netlify.app/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame media__frame--paper"><img class="media__img" src="assets/img/projects/cv-01.webp" width="1440" height="900" alt="لقطة شاشة للسيرة الذاتية الرقمية تعرض البيانات الشخصية والتعليم" data-i18n-alt="ch.4.altA" loading="lazy" decoding="async"></div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.4.capA">الصفحة الأولى من السيرة الذاتية الرقمية</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/cv-02.webp" width="1440" height="900" alt="قسم الخبرات والمهارات في السيرة الذاتية الرقمية" data-i18n-alt="ch.4.altB" loading="lazy" decoding="async" style="object-position:50% 55%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.4.capB">التعليم والخبرات والمهارات</span></figcaption>
+            </figure>
+            <span class="media-chip media-chip--a" data-i18n="ch.4.chip1">وضع ليلي</span>
+            <span class="media-chip media-chip--b" data-i18n="ch.4.chip2">قابلة للطباعة</span>
+            <span class="chapter__bignum" aria-hidden="true">04</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--split reveal" id="ch-store" data-project="store" style="--accent:#c98712;--accent-2:#14506e">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">05</span><span class="chapter__type" data-i18n="ch.5.type">متجر خدمات</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.5.titleMain">متجر MKH</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.5.desc">واجهة خدمات تصميم رقمية وتعليمية تجمع الخدمات والأسعار في مكان واحد، مع حاسبة طلب تفاعلية تعرض ملخص التكلفة قبل التواصل والطلب عبر تيليجرام.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.5.tag1">خدمات تصميم</li><li data-i18n="ch.5.tag2">حاسبة طلب</li><li data-i18n="ch.5.tag3">تيليجرام</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.5.metaType">متجر خدمات</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.5.metaFocus">أسعار · حاسبة طلب · تواصل</dd></div>
+              </dl>
+              <a class="project-link" href="https://mkh.abdukhayemen.workers.dev/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame media__frame--browser">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>mkh — services</span></span>
+                <img class="media__img" src="assets/img/projects/store-01.webp" width="1440" height="900" alt="واجهة متجر MKH: عنوان «التصميم معنا له فن ومعنى» وعينات من الأعمال" data-i18n-alt="ch.5.altA" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.5.capA">واجهة متجر MKH الرئيسية</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/store-02.webp" width="1440" height="900" alt="معرض الأعمال والخدمات داخل متجر MKH" data-i18n-alt="ch.5.altB" loading="lazy" decoding="async" style="object-position:40% 20%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.5.capB">معرض الأعمال والخدمات</span></figcaption>
+            </figure>
+            <span class="media-chip media-chip--a" data-i18n="ch.5.chip1">١٢ خدمة</span>
+            <span class="chapter__bignum" aria-hidden="true">05</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--mosaic reveal" id="ch-gallery" data-project="gallery" style="--accent:#a9772f;--accent-2:#14263d">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">06</span><span class="chapter__type" data-i18n="ch.6.type">معرض أعمال</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.6.titleMain">معرض أعمال MKH</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.6.desc">معرض أعمال شخصي يجمع مشاريع المواقع والتجارب الرقمية، ويعرّف بالنهج والأدوات المستخدمة، من تنظيم الفكرة إلى النشر، بلغة بصرية دافئة وتفاصيل متقنة.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.6.tag1">معرض أعمال</li><li data-i18n="ch.6.tag2">هوية</li><li data-i18n="ch.6.tag3">أدوات</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.6.metaType">معرض أعمال</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.6.metaFocus">مشاريع · نهج · أدوات</dd></div>
+              </dl>
+              <a class="project-link" href="https://mkh26.abdukhayemen.workers.dev/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame media__frame--browser">
+                <span class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>mkh / portfolio</span></span>
+                <img class="media__img" src="assets/img/projects/gallery-01.webp" width="1440" height="900" alt="واجهة معرض أعمال MKH: عنوان «من وحي الفكرة إلى روعة التنفيذ» ونافذة مشروع" data-i18n-alt="ch.6.altA" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.6.capA">الواجهة الرئيسية لمعرض أعمال MKH</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/gallery-02.webp" width="1440" height="900" alt="قسم «أصنع الواجهة، وأعتني بالحكاية» داخل معرض أعمال MKH" data-i18n-alt="ch.6.altB" loading="lazy" decoding="async" style="object-position:30% 40%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.6.capB">قسم النهج: أصنع الواجهة، وأعتني بالحكاية</span></figcaption>
+            </figure>
+            <span class="chapter__bignum" aria-hidden="true">06</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--immersive ch--spotlight reveal" id="ch-beyond" data-project="beyond" style="--accent:#e43a5b;--accent-2:#f2c8b4">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">07</span><span class="chapter__type" data-i18n="ch.7.type">تحقيق تفاعلي</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.7.titleMain">ما وراء الصورة</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.7.desc">تحقيق بصري تفاعلي في عصر التزييف العميق: خمس عشرة شريحة تفحص كيف تخدع الصورة فهمنا للواقع، بين حالات حقيقية وأرقام واختبار بصري وأدوات للتحقق.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.7.tag1">تحقيق بصري</li><li data-i18n="ch.7.tag2">تزييف عميق</li><li data-i18n="ch.7.tag3">وعي</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.7.metaType">تحقيق تفاعلي</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.7.metaFocus">خمس عشرة شريحة · اختبار بصري</dd></div>
+              </dl>
+              <a class="project-link" href="https://marwa.abdukhayemen.workers.dev/#slide-1" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/beyond-01.webp" width="1440" height="900" alt="غلاف «كيف تخدع صورة واحدة ملايين العقول؟» بعين كبيرة وعنوان أحمر" data-i18n-alt="ch.7.altA" loading="lazy" decoding="async"></div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.7.capA">غلاف التحقيق البصري</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/beyond-02.webp" width="1440" height="900" alt="شريحة «صور كاذبة هزّت العالم» داخل التحقيق البصري" data-i18n-alt="ch.7.altB" loading="lazy" decoding="async" style="object-position:50% 35%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.7.capB">حالات صور كاذبة هزّت العالم</span></figcaption>
+            </figure>
+            <span class="media-chip media-chip--a" data-i18n="ch.7.chip1">١٥ شريحة</span>
+            <span class="chapter__bignum" aria-hidden="true">07</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--immersive ch--terminal reveal" id="ch-warning" data-project="warning" style="--accent:#2fd8bd;--accent-2:#ff5a4e">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">08</span><span class="chapter__type" data-i18n="ch.8.type">محاكاة توعوية</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.8.titleMain">قبل أن تنقر</span><span class="chapter__sep" aria-hidden="true">|</span><span class="chapter__sub" data-i18n="ch.8.titleSub">التوعية بالروابط الخطرة</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.8.desc">محاكاة توعوية تفاعلية تحوّل خطر الروابط المشبوهة إلى تجربة آمنة؛ ثماني محطات تستعرض التصيد والاختراق والوقاية، وتنتهي باختبار قصير — دون فحص الجهاز أو جمع بيانات.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.8.tag1">محاكاة</li><li data-i18n="ch.8.tag2">أمن رقمي</li><li data-i18n="ch.8.tag3">توعية</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.8.metaType">محاكاة توعوية</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.8.metaFocus">ثماني محطات · اختبار قصير</dd></div>
+              </dl>
+              <a class="project-link" href="https://warning.abdukhayemen.workers.dev/" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame media__frame--terminal">
+                <span class="terminal-bar" aria-hidden="true"><i></i><span>SIMULATION // NO REAL BREACH</span></span>
+                <img class="media__img" src="assets/img/projects/warning-01.webp" width="1440" height="900" alt="شاشة البداية لعرض «ضغطة واحدة قد تكلّفك الكثير» بهاتف ينبه إلى رابط مشبوه" data-i18n-alt="ch.8.altA" loading="lazy" decoding="async">
+              </div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.8.capA">شاشة البداية للمحاكاة التوعوية</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/warning-02.webp" width="1440" height="900" alt="محطة المخاطر داخل المحاكاة: ماذا يحدث عند فتح رابط خبيث؟" data-i18n-alt="ch.8.altB" loading="lazy" decoding="async" style="object-position:50% 42%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.8.capB">محطة المخاطر: ماذا يحدث عند فتح رابط خبيث؟</span></figcaption>
+            </figure>
+            <span class="media-chip media-chip--a" data-i18n="ch.8.chip1">٨ محطات</span>
+            <span class="chapter__bignum" aria-hidden="true">08</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter ch--wide ch--journey reveal" id="ch-journey" data-project="journey" style="--accent:#b98a3e;--accent-2:#35583f">
+        <div class="chapter__inner">
+          <div class="chapter__head">
+            <div class="chapter__heading">
+              <div class="chapter__meta"><span class="chapter__num">09</span><span class="chapter__type" data-i18n="ch.9.type">عرض تقديمي</span></div>
+              <h2 class="chapter__title"><span data-i18n="ch.9.titleMain">رحلتي في عالم الويب</span></h2>
+            </div>
+            <div class="chapter__side">
+              <p class="chapter__desc" data-i18n="ch.9.desc">عرض تفاعلي يوثّق رحلة بناء ثمانية مشاريع ويب متنوعة، من الحكاية والذاكرة إلى الخدمات والتوعية، ويستخلص الدروس التي تحوّل كل تجربة إلى خطوة جديدة.</p>
+              <ul class="chapter__tags"><li data-i18n="ch.9.tag1">عرض تفاعلي</li><li data-i18n="ch.9.tag2">رحلة</li><li data-i18n="ch.9.tag3">دروس</li></ul>
+              <dl class="chapter__facts">
+                <div><dt data-i18n="ui.type">النوع</dt><dd data-i18n="ch.9.metaType">عرض تقديمي</dd></div>
+                <div><dt data-i18n="ui.focus">المحتوى</dt><dd data-i18n="ch.9.metaFocus">ثمانية مشاريع · اثنتا عشرة شريحة</dd></div>
+              </dl>
+              <a class="project-link" href="https://my-web-journey.abdukhayemen.workers.dev/#slide-12" target="_blank" rel="noopener noreferrer" data-cursor="view">
+                <span data-i18n="ui.visit">زيارة المشروع</span>
+                <span class="project-link__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 19 19 5M9 5h10v10" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+              </a>
+            </div>
+          </div>
+          <div class="chapter__media">
+            <figure class="media media--main">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/journey-01.webp" width="1440" height="900" alt="غلاف «رحلتي في عالم الويب» بتكوين من الأوراق وخط عربي" data-i18n-alt="ch.9.altA" loading="lazy" decoding="async"></div>
+              <figcaption><span class="media__no">01</span><span data-i18n="ch.9.capA">غلاف «رحلتي في عالم الويب»</span></figcaption>
+            </figure>
+            <figure class="media media--detail">
+              <div class="media__frame"><img class="media__img" src="assets/img/projects/journey-02.webp" width="1440" height="900" alt="شريحة السيرة الذاتية الرقمية داخل عرض «رحلتي في عالم الويب»" data-i18n-alt="ch.9.altB" loading="lazy" decoding="async" style="object-position:50% 40%"></div>
+              <figcaption><span class="media__no">02</span><span data-i18n="ch.9.capB">شريحة السيرة الذاتية داخل العرض</span></figcaption>
+            </figure>
+            <span class="media-chip media-chip--a" data-i18n="ch.9.chip1">١٢ شريحة</span>
+            <span class="chapter__bignum" aria-hidden="true">09</span>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <div class="works__end">
+      <p class="works__endline"><span data-i18n="works.end">تمّ العرض — تسعة مشاريع</span><span class="works__endrule" aria-hidden="true"></span><span lang="en" aria-hidden="true">FIN / 09</span></p>
+      <a class="btn btn--ghost" href="#index">
+        <span data-i18n="works.back">العودة إلى الفهرس</span>
+        <svg class="btn__arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+  <section class="about" id="about" aria-labelledby="aboutTitle">
+    <div class="about__grid">
+      <aside class="about__aside">
+        <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="about.eyebrow">عن المعرض</span></p>
+        <div class="about__seal" aria-hidden="true">
+          <svg viewBox="0 0 200 200" fill="none">
+            <circle cx="100" cy="100" r="94" stroke="currentColor" stroke-width=".7" opacity=".55"/>
+            <circle cx="100" cy="100" r="76" stroke="currentColor" stroke-width=".7" opacity=".3" stroke-dasharray="1 5"/>
+            <rect x="63" y="63" width="74" height="74" stroke="currentColor" stroke-width=".9"/>
+            <rect x="63" y="63" width="74" height="74" stroke="currentColor" stroke-width=".9" transform="rotate(45 100 100)"/>
+            <circle cx="100" cy="100" r="10" fill="currentColor"/>
+            <circle cx="100" cy="100" r="30" stroke="currentColor" stroke-width=".6"/>
+          </svg>
+        </div>
+        <p class="about__signature"><span lang="ar">الشريحي</span><span class="about__signature-lat" lang="en">ALSHURAIHI</span></p>
+        <p class="about__latin" lang="en">DIGITAL ATELIER — 2026</p>
+      </aside>
+
+      <div class="about__main">
+        <h2 class="about__title" id="aboutTitle" data-i18n-html="about.title">المعنى أولاً،<br><em>ثم تأتي الواجهة.</em></h2>
+        <p class="about__lead" data-i18n="about.lead">«الشريحي» معرض رقمي يجمع تسعة أعمال في السرد والتاريخ، والتوعية، والتصميم. هنا لا تُعرض المشاريع كروابط، بل كتجارب لها فكرة وإيقاع وتفاصيل.</p>
+        <p class="about__text" data-i18n="about.text">أبدأ كل عمل من سؤال: ما الذي يجب أن يخرج به الزائر؟ ثم تُرتّب المعلومة، ويُختار الإيقاع، ويُبنى المسار. أتعلّم بالممارسة، وأعيد مراجعة كل تفصيلة — من حجم الصورة إلى سرعة التحميل — قبل النشر.</p>
+        <blockquote class="about__quote">
+          <span class="about__quote-mark" aria-hidden="true">”</span>
+          <p data-i18n="about.quote">الواجهة الجيدة لا ترفع صوتها؛ بل تجعل المعنى مسموعاً.</p>
+        </blockquote>
+        <ol class="approach">
+          <li class="approach__item">
+            <span class="approach__num" aria-hidden="true">01</span>
+            <div><h3 data-i18n="about.step1t">الفكرة</h3><p data-i18n="about.step1d">نبدأ من المعنى والجمهور قبل الألوان والخطوط.</p></div>
+          </li>
+          <li class="approach__item">
+            <span class="approach__num" aria-hidden="true">02</span>
+            <div><h3 data-i18n="about.step2t">الحكاية</h3><p data-i18n="about.step2d">نرتّب المحتوى في مسار يُقرأ ويُشاهد بلا تشتيت.</p></div>
+          </li>
+          <li class="approach__item">
+            <span class="approach__num" aria-hidden="true">03</span>
+            <div><h3 data-i18n="about.step3t">التفاصيل</h3><p data-i18n="about.step3d">المسافات، والصورة، والحركة في خدمة المعنى.</p></div>
+          </li>
+          <li class="approach__item">
+            <span class="approach__num" aria-hidden="true">04</span>
+            <div><h3 data-i18n="about.step4t">التنفيذ</h3><p data-i18n="about.step4d">تجربة سريعة ومتجاوبة تُختبر على الشاشات قبل النشر.</p></div>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contactTitle">
+    <div class="contact__rings" aria-hidden="true">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="contact__inner">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__dot" aria-hidden="true"></span><span data-i18n="contact.eyebrow">لنبدأ الحكاية التالية</span></p>
+      <h2 class="contact__title" id="contactTitle" data-i18n-html="contact.title">لديك فكرة؟<br><em>لنجعلها واقعاً.</em></h2>
+      <p class="contact__desc" data-i18n="contact.desc">شاركني الفكرة في سطرين، ودعنا نبدأ من هناك. التواصل عبر تيليجرام مباشرة.</p>
+      <a class="tg-btn" href="https://t.me/MKH_ksa" target="_blank" rel="noopener noreferrer" data-cursor="view">
+        <span class="tg-btn__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.6 18.7 19c-.2 1-.9 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.9 13.1 2.3 11.7c-1-.3-1-1 .2-1.5l18.9-7.3c.8-.3 1.6.2 1.3 1.7Z"/></svg>
+        </span>
+        <span class="tg-btn__text">
+          <span class="tg-btn__label" data-i18n="contact.button">تواصل عبر تيليجرام</span>
+          <span class="tg-btn__handle" lang="en" dir="ltr">@MKH_ksa</span>
+        </span>
+        <span class="tg-btn__arrow" aria-hidden="true">↗</span>
+        <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+      </a>
+      <p class="contact__note"><span data-i18n="contact.note">رابط مباشر إلى حساب المعرض على تيليجرام.</span></p>
+    </div>
+    <div class="contact__ghost" aria-hidden="true" lang="en">LET'S TALK</div>
+  </section>
+</main>
+<footer class="site-footer" id="footer">
+  <div class="footer__inner">
+    <div class="footer__top">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="#top" aria-label="الشريحي — الرئيسية" data-i18n-aria-label="ui.home">
+          <svg class="seal" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+            <circle cx="24" cy="24" r="22.25" stroke="currentColor" stroke-width="1"/>
+            <rect x="13.5" y="13.5" width="21" height="21" stroke="currentColor" stroke-width="1"/>
+            <rect x="13.5" y="13.5" width="21" height="21" stroke="currentColor" stroke-width="1" transform="rotate(45 24 24)"/>
+            <circle cx="24" cy="24" r="8.5" stroke="currentColor" stroke-width=".6" opacity=".55"/>
+            <circle cx="24" cy="24" r="3.8" fill="currentColor"/>
+          </svg>
+          <span class="brand__text"><span class="brand__ar" lang="ar">الشريحي</span><span class="brand__lat" lang="en">ALSHURAIHI</span></span>
+        </a>
+        <p class="footer__tagline" data-i18n="brand.tagline">من وحي الفكرة إلى روعة التنفيذ</p>
+      </div>
+      <nav class="footer__nav" aria-label="روابط التذييل" data-i18n-aria-label="ui.footerNav">
+        <a href="#works" data-i18n="nav.work">الأعمال</a>
+        <a href="#index" data-i18n="nav.index">الفهرس</a>
+        <a href="#about" data-i18n="nav.about">عن المعرض</a>
+        <a href="#contact" data-i18n="nav.contact">التواصل</a>
+      </nav>
+      <div class="footer__contact">
+        <span class="footer__label" data-i18n="footer.label">قناة التواصل</span>
+        <a class="footer__tg" href="https://t.me/MKH_ksa" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.9 4.6 18.7 19c-.2 1-.9 1.2-1.7.8l-4.6-3.4-2.2 2.1c-.3.3-.5.5-1 .5l.3-4.7 8.6-7.8c.4-.3-.1-.5-.6-.2L6.9 13.1 2.3 11.7c-1-.3-1-1 .2-1.5l18.9-7.3c.8-.3 1.6.2 1.3 1.7Z"/></svg>
+          <span dir="ltr">@MKH_ksa</span>
+          <span aria-hidden="true">↗</span>
+          <span class="sr-only" data-i18n="ui.opensNew">يفتح في تبويب جديد</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p class="footer__copy">© <span data-year>2026</span> <span data-i18n="footer.rights">الشريحي — جميع الحقوق محفوظة.</span></p>
+      <p class="footer__meta" data-i18n="footer.meta">عربي / English — وضع ليلي / نهاري</p>
+      <a class="footer__toTop" href="#top"><span data-i18n="ui.backTop">العودة إلى الأعلى</span><span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="footer__ghost" aria-hidden="true" lang="en">ALSHURAIHI</div>
+  </div>
+</footer>
+<div class="intro" id="intro" role="status" aria-live="polite" hidden>
+  <div class="intro__inner">
+    <div class="intro__seal" aria-hidden="true">
+      <svg viewBox="0 0 160 160" fill="none">
+        <circle cx="80" cy="80" r="74" stroke="currentColor" stroke-width=".8"/>
+        <rect x="48" y="48" width="64" height="64" stroke="currentColor" stroke-width=".9"/>
+        <rect x="48" y="48" width="64" height="64" stroke="currentColor" stroke-width=".9" transform="rotate(45 80 80)"/>
+        <circle cx="80" cy="80" r="7" fill="currentColor"/>
+        <circle cx="80" cy="80" r="26" stroke="currentColor" stroke-width=".6" opacity=".5"/>
+      </svg>
+    </div>
+    <p class="intro__kicker" data-i18n="intro.kicker">معرض أعمال رقمي</p>
+    <p class="intro__name" lang="ar">الشريحي</p>
+    <p class="intro__tagline" data-i18n="brand.tagline">من وحي الفكرة إلى روعة التنفيذ</p>
+    <div class="intro__meta">
+      <span data-i18n="intro.loading">جارٍ فتح المعرض</span>
+      <span class="intro__count" aria-hidden="true"><span id="introNum">00</span> / 09</span>
+    </div>
+    <div class="intro__line" aria-hidden="true"><span></span></div>
+  </div>
+  <button class="intro__skip" type="button" id="introSkip" data-i18n="intro.skip">تخطّي المقدمة</button>
+</div>
+<div class="sr-only" role="status" aria-live="polite" id="liveRegion"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
